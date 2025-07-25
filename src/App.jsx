@@ -1,13 +1,32 @@
-import React from "react";
-import Navbar from "./components/Navbar";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
+import AppRoute from "./routes/AppRoute";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      smooth: true,
+      lerp: 0.1, // interpolation intensity (between 0 and 1), default 0.1
+      wheelMultiplier: 1.2, // speed scaling for wheel events, default 1
+      smoothTouch: true,
+    }); // enable smooth scrolling on touch, default false });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
+  }, []);
+
   return (
-    <nav className="bg-green-400 w-full h-screen flex justify-end items-end py-5">
-      <div className="bg-red-400 w-full h-16 flex items-center justify-center ">
-        <Navbar />
-      </div>
-    </nav>
+    <>
+      <ScrollToTop />
+
+      <AppRoute />
+    </>
   );
 };
 
