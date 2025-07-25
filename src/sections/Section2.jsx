@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
-
+import micky from "../assets/micky-min.png"
 const Section2 = () => {
   const navigate = useNavigate()
   const sectionRef = useRef(null);
@@ -59,7 +59,7 @@ const Section2 = () => {
         <div className="w-full h-[60%] flex flex-col bg-secondary justify-center items-center gap-5">
           <div className="w-[90%] h-[70%] relative bg-primary">
             <motion.img
-              src="src/assets/micky.png"
+              src={micky}
               alt="image"
               style={{ scale: imageScale }}
               className="object-cover absolute left-0 bottom-0 h-[140%] md:h-[190%] img-filter"

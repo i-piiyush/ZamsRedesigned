@@ -111,7 +111,7 @@ const ProductPage = () => {
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="w-full md:px-32 px-10 py-4 flex gap-3 flex-wrap "
+        className="w-full md:px-32 px-10 py-16 flex gap-3 flex-wrap "
       >
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product, index) => (

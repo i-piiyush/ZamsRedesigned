@@ -1,5 +1,5 @@
 import Loader from "../components/Loader";
-import OnePiece from "../assets/OnePiece.png"
+import OnePiece from "../assets/OnePiece-min.png"
 
 
 const Section1 = () => {
