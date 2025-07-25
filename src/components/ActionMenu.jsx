@@ -4,6 +4,8 @@ import { IoMdSearch } from "react-icons/io";
 import { LuShoppingCart } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { useCartContext } from "../context/CartContext"
+import { useFilterContext } from "../context/FilterContext";
+
 
 const Tooltip = ({ children, content }) => {
   const [open, setOpen] = useState(false);
@@ -32,7 +34,11 @@ const Tooltip = ({ children, content }) => {
 };
 
 const ActionMenu = () => {
-  const { cartItems, setIsCartOpen, isCartOpen } = useCartContext();
+  const { cartItems, setIsCartOpen, isCartOpen,} = useCartContext();
+  const {setToggleSearch,toggleSearch } = useFilterContext()
+
+
+  console.log("toggleSearch is", toggleSearch);
   
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
@@ -42,7 +48,7 @@ const ActionMenu = () => {
     <div className="bg-white flex justify-center items-center gap-4 px-5 rounded-full drp py-3 relative z-10 md:scale-100 scale-90">
       {/* Search */}
       <Tooltip content="search">
-        <span>
+        <span onClick={()=> setToggleSearch(!toggleSearch)}>
           <IoMdSearch size="1.2rem" className="cursor-pointer" />
         </span>
       </Tooltip>

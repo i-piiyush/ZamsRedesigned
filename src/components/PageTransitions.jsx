@@ -29,7 +29,7 @@ const PageTransitions = ({text,animateBy,delay}) => {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 bg-black overflow-hidden z-[9999] flex flex-col items-center justify-center"
+          className="fixed inset-0 bg-zinc-700 overflow-hidden z-[9999] flex flex-col items-center justify-center"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, filter: "blur(8px)" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}

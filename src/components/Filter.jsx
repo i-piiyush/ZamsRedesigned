@@ -115,7 +115,7 @@ const Filter = () => {
                       max={MAX_PRICE}
                       value={filters.priceRange[0]}
                       onChange={(e) => handlePriceChange(0, e.target.value)}
-                      className="w-full"
+                      className="w-full bg-red-300"
                     />
                     <input
                       type="range"

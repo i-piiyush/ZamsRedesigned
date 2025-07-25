@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-secondary: #9B9B9B; 
-  --color-primary: #D9D9D9;
+  --color-secondary: #9b9b9b;
+  --color-primary: #d9d9d9;
 }
 
-*{
-    box-sizing: border-box;
-    font-family: "inter";
+* {
+  box-sizing: border-box;
+  font-family: "inter";
 }
-.drp{
-    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.234));
+.drp {
+  filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.234));
 }
 .img-filter {
   filter: saturate(0) brightness(1.1);
@@ -20,4 +20,24 @@
 
 .img-filter:hover {
   filter: saturate(1) brightness(1);
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.767);
+  border-radius: 3px;
+  outline: none;
+}
+
+/* Chrome, Safari, Edge */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: black;  /* 👈 black ball */
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
 }

@@ -7,6 +7,8 @@ import { ProductProvider } from "./context/ProductContext.jsx";
 import { FilterProvider } from "./context/FilterContext.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
 import AddToCart from "./components/AddToCart.jsx";
+import Searchbar from "./components/Searchbar.jsx";
+
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -14,7 +16,9 @@ createRoot(document.getElementById("root")).render(
       <CartProvider>
         <FilterProvider>
           <App />
+
           <AddToCart />
+          <Searchbar />
         </FilterProvider>{" "}
       </CartProvider>
     </ProductProvider>

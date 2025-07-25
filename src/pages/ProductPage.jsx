@@ -96,7 +96,7 @@ const ProductPage = () => {
         >
           Filters
         </motion.button>
-        <span className="hidden sm:block">
+        <span className="hidden sm:block z-[50]" >
           <Magnet magnetStrength={9}>
             <ActionMenu />
           </Magnet>
