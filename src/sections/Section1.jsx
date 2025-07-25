@@ -1,4 +1,5 @@
 import Loader from "../components/Loader";
+import OnePiece from "../assets/OnePiece.png"
 
 
 const Section1 = () => {
@@ -23,7 +24,7 @@ const Section1 = () => {
         ></div>
         <div className="absolute bottom-0 left-0 w-full h-[800px] md:h-[900px] 2xl:h-[1000px] overflow-hidden z-20">
           <img
-            src="src/assets/OnePiece.png"
+            src={OnePiece}
             alt="landing_image"
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-[80%] object-cover img-filter md:left-[50%] md:-translate-x-0"
           />
